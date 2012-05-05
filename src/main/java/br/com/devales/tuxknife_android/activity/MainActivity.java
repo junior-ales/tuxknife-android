@@ -1,16 +1,18 @@
 package br.com.devales.tuxknife_android.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.EditText;
 import br.com.devales.tuxknife_android.R;
-import br.com.devales.tuxknife_android.business.MainBll;
 
 public class MainActivity extends Activity {
 
     private static String TAG = "tuxknife-android";
-    private MainBll bll = new MainBll();
+    public final static String EXTRA_MESSAGE = "br.com.devales.tuxknife_android.MESSAGE";
+//    private MainBll bll = new MainBll();
 
     /**
      * Called when the activity is first created.
@@ -22,12 +24,16 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.i(TAG, "onCreate");
-		setContentView(R.layout.rel);
-		this.getHeader();
+		setContentView(R.layout.main);
 	}
 
-	private void getHeader() {
-		((TextView) findViewById(R.id.txtDisco)).setText(bll.getDisco());
+	public void sendMessage(View view) {
+		Intent intent = new Intent(this, DisplayMessageActivity.class);
+		EditText editText = (EditText) findViewById(R.id.edit_message);
+		String message = editText.getText().toString();
+		intent.putExtra(EXTRA_MESSAGE, message);
+		startActivity(intent);
+//		((TextView) findViewById(R.id.txtDisco)).setText(bll.getDisco());
 	}
 
 }

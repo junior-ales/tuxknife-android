@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">tuxknifeandroid</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
-    <string name="hello">Hello tuxknife-android!</string>
+    <string name="edit_message">Insira uma mensagem</string>
+    <string name="button_send">Enviar</string>
+    <string name="hello">Ola fera!!!</string>
     <string name="title">Titulo</string>
 </resources>

@@ -12,7 +12,6 @@ public class MainActivity extends Activity {
 
     private static String TAG = "tuxknife-android";
     public final static String EXTRA_MESSAGE = "br.com.devales.tuxknife_android.MESSAGE";
-//    private MainBll bll = new MainBll();
 
     /**
      * Called when the activity is first created.
@@ -33,7 +32,6 @@ public class MainActivity extends Activity {
 		String message = editText.getText().toString();
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
-//		((TextView) findViewById(R.id.txtDisco)).setText(bll.getDisco());
 	}
 
 }
